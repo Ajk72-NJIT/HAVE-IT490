@@ -4,10 +4,15 @@ require_once('path.inc');
 require_once('get_host_info.inc');
 require_once('rabbitMQLib.inc');
 
-function doLogin($username,$password)
-{
+function goDatabase($request)
+{	
 	include "testRabbitMQClient (copy).php"; 
 	return $response;
+}
+
+function goDMZ($username)
+{
+
 }
 
 function requestProcessor($request)
@@ -20,13 +25,10 @@ function requestProcessor($request)
   {
     return "ERROR: unsupported message type";
   }
-  switch ($request['type'])
+  switch ($request['destination'])
   {
-    case "Login":
-	    return doLogin($request['username'],$request['password']);
-	    break;
-    case "validate_session":
-	    return doValidate($request['sessionId']);
+    case "database":
+	    return goDatabase($request);
 	    break;
   }
   return $finalResponse;
