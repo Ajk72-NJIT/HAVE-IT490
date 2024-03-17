@@ -50,15 +50,16 @@ function getSimilarRecipes($recipe_id)
 	            }
 
 		$formattedSimilarRecipe = [
-	            'recipe_id' => $recipeId,
+	            'recipe_id' => $similarRecipe['id'],
+		    'recipe_title' => $similarRecipe['title'],
 	            'ingredients' => $ingredients,
 	            'recipe_instructions' => $formattedSteps
-	        	];
+	            ];
 
 	$formattedSimilarRecipes = array();
-	$formattedSimilarRecipes['type'] = "push recipes";
+	$formattedSimilarRecipes['type'] = "push similar recipes";
 	$formattedSimilarRecipes['destination'] = "database";
-	$formattedSimilarRecipes['similarRecipes'] = $formattedSimilarRecipe;
+	$formattedSimilarRecipes['similar_recipes'] = $formattedSimilarRecipe;
 	}
 	return $formattedSimilarRecipes;
 	}
@@ -123,6 +124,7 @@ function getRecipes($ingredientsArray)
 	
 	    $formattedRecipe = [
 	        'recipe_id' => $recipe['id'],
+		'recipe_title' => $recipe['title'],
 	        'missed_ingredients' => $missedIngredients,
 	        'available_ingredients' => $availableIngredients,
 	        'recipe_instructions' => $formattedSteps
