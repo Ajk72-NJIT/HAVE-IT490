@@ -5,14 +5,22 @@ require_once __DIR__.'/vendor/autoload.php';
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 
+$apiKey = 'af935f674c7243b59e152b70834a8dd3';
 
-
-function getRecipes($ingredients)
+function getSimilarRecipes($recipe_id)
 	{
-	$apiKey = 'af935f674c7243b59e152b70834a8dd3';
+		
+	}
+
+function getIngredients()
+	{
 	
+	}
+
+function getRecipes($ingredientsArray)
+	{
+	$ingredients = implode(',', $ingredientsArray);
 	$searchUrl = "https://api.spoonacular.com/recipes/findByIngredients?ingredients={$ingredients}&apiKey={$apiKey}&number=5";
-	
 	$curl = curl_init($searchUrl);
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 	$searchResponse = curl_exec($curl);
