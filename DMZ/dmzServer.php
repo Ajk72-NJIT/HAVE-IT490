@@ -9,10 +9,62 @@ $apiKey = 'af935f674c7243b59e152b70834a8dd3';
 
 function getSimilarRecipes($recipe_id)
 	{
+	$searchUrl = "https://api.spoonacular.com/recipes/$recipe_id/similar&number=3";
+	$curl = curl_init($searchUrl);
+	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+	$searchResponse = curl_exec($curl);
+	curl_close($curl);
+	$similarRecipes = json_decode($searchResponse, true);
+
+	$similarRecipesDetails = [];
+
+	foreach ($similarRecipes as $similarRecipe) {
+
+		$instructionsUrl = "https://api.spoonacular.com/recipes/{$similarRecipe['id']}/analyzedInstructions?apiKey={$apiKey}"
+		curl_setopt($curl, CURLOPT_URL, $instructionsUrl);
+        	$instructionsResponse = curl_exec($curl);
+        	$instructionsData = json_decode($instructionsResponse, true);
 		
+		$ingredientsUrl = "https://api.spoonacular.com/recipes/{$similarRecipe['id']}/ingredientWidget.json?apiKey={$apiKey}"
+		curl_setopt($curl, CURLOPT_URL, $ingredientsUrl);
+        	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+		$ingredientsResponse = curl_exec($curl);
+        	$ingredientsData = json_decode($ingredientsResponse, true);
+
+		$formattedSteps = [];
+	        foreach ($instructionsData as $instruction) {
+	            foreach ($instruction['steps'] as $step) {
+	                $formattedSteps[] = [
+	                    'number' => $step['number'],
+	                    'step' => $step['step'],
+			        ];
+			}
+		}
+		$ingredients = [];
+	        foreach ($ingredientsData['ingredients'] as $ingredient) {
+		        $ingredients[] = [
+		                //'ingredient_id' => $ingredient['id'],
+		                'ingredient_name' => $ingredient['name'],
+		                'amount' => $ingredient['amount']['us']['value'],
+				'unit' => $ingredient['amount']['us']['unit']
+		        ];
+	            }
+
+		$formattedSimilarRecipe = [
+	            'recipe_id' => $recipeId,
+	            'ingredients' => $ingredients,
+	            'recipe_instructions' => $formattedSteps
+	        	];
+
+	$formattedSimilarRecipes = array();
+	$formattedSimilarRecipes['type'] = "push recipes";
+	$formattedSimilarRecipes['destination'] = "database";
+	$formattedSimilarRecipes['similarRecipes'] = $formattedSimilarRecipe;
+	}
+	return $formattedSimilarRecipes;
 	}
 
-function getIngredients()
+function getIngredients($ingredient_name)
 	{
 	
 	}
@@ -111,6 +163,9 @@ $callback = function ($msg) use ($channel) {
                 break;
             case "get similar recipes":
                 $response = getSimilarRecipes($request['recipe_id']);
+                break;
+            case "get ingredients":
+                $response = getIngredients($request['ingredients']);
                 break;
             default:
                 $response = ['success' => false, 'message' => "Request type not handled"];
