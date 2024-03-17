@@ -22,7 +22,6 @@ function getRecipes($ingredients)
 	$formattedRecipes = [];
 	
 	foreach ($recipes as $recipe) {
-	    // Second API call: Get Analyzed Recipe Instructions
 	    $instructionsUrl = "https://api.spoonacular.com/recipes/{$recipe['id']}/analyzedInstructions?apiKey={$apiKey}";
 	    curl_setopt_array($curl = curl_init($instructionsUrl), [
 	        CURLOPT_RETURNTRANSFER => true,
@@ -31,10 +30,9 @@ function getRecipes($ingredients)
 	    curl_close($curl);
 	    $instructionsData = json_decode($instructionsResponse, true);
 	
-	    // Extracting steps and equipment from the instructions
 	    $formattedSteps = [];
-	    foreach ($instructionsData as $block) {
-	        foreach ($block['steps'] as $step) {
+	    foreach ($instructionsSteps as $ins) {
+	        foreach ($ins['steps'] as $step) {
 	            $stepDetails = [
 	                'number' => $step['number'],
 	                'step' => $step['step'],
