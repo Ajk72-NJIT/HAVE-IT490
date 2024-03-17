@@ -20,14 +20,13 @@ function getSimilarRecipes($recipe_id)
 
 	foreach ($similarRecipes as $similarRecipe) {
 
-		$instructionsUrl = "https://api.spoonacular.com/recipes/{$similarRecipe['id']}/analyzedInstructions?apiKey={$apiKey}"
-		curl_setopt($curl, CURLOPT_URL, $instructionsUrl);
+		$instructionsUrl = "https://api.spoonacular.com/recipes/{$similarRecipe['id']}/analyzedInstructions?apiKey={$apiKey}";
+		curl_setopt_array($curl = curl_init($instructionsUrl), [CURLOPT_RETURNTRANSFER => true]);
         	$instructionsResponse = curl_exec($curl);
         	$instructionsData = json_decode($instructionsResponse, true);
 		
-		$ingredientsUrl = "https://api.spoonacular.com/recipes/{$similarRecipe['id']}/ingredientWidget.json?apiKey={$apiKey}"
-		curl_setopt($curl, CURLOPT_URL, $ingredientsUrl);
-        	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+		$ingredientsUrl = "https://api.spoonacular.com/recipes/{$similarRecipe['id']}/ingredientWidget.json?apiKey={$apiKey}";
+		curl_setopt_array($curl = curl_init($ingredientsUrl), [CURLOPT_RETURNTRANSFER => true]);
 		$ingredientsResponse = curl_exec($curl);
         	$ingredientsData = json_decode($ingredientsResponse, true);
 
