@@ -8,83 +8,83 @@ use PhpAmqpLib\Message\AMQPMessage;
 
 
 function getRecipes($ingredients)
-{
-$apiKey = 'af935f674c7243b59e152b70834a8dd3';
-
-$searchUrl = "https://api.spoonacular.com/recipes/findByIngredients?ingredients={$ingredients}&apiKey={$apiKey}&number=5";
-
-$curl = curl_init($searchUrl);
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-$searchResponse = curl_exec($curl);
-curl_close($curl);
-$recipes = json_decode($searchResponse, true);
-
-$formattedRecipes = [];
-
-foreach ($recipes as $recipe) {
-    // Second API call: Get Analyzed Recipe Instructions
-    $instructionsUrl = "https://api.spoonacular.com/recipes/{$recipe['id']}/analyzedInstructions?apiKey={$apiKey}";
-    curl_setopt_array($curl = curl_init($instructionsUrl), [
-        CURLOPT_RETURNTRANSFER => true,
-    ]);
-    $instructionsResponse = curl_exec($curl);
-    curl_close($curl);
-    $instructionsData = json_decode($instructionsResponse, true);
-
-    // Extracting steps and equipment from the instructions
-    $formattedSteps = [];
-    foreach ($instructionsData as $block) {
-        foreach ($block['steps'] as $step) {
-            $stepDetails = [
-                'number' => $step['number'],
-                'step' => $step['step'],
-            ];
-
-            $formattedSteps[] = $stepDetails;
-        }
-    }
-
-    // Format missed ingredients
-    $missedIngredients = array_map(function ($ingredient) {
-        return [
-            'ingredient_id' => $ingredient['id'],
-            'ingredient_name' => $ingredient['name'],
-            'unit' => $ingredient['unitShort'],
-            'original_unit' => $ingredient['original']
-        ];
-    }, $recipe['missedIngredients'] ?? []);
-
-    // Format used (available) ingredients
-    $availableIngredients = array_map(function ($ingredient) {
-        return [
-            'ingredient_id' => $ingredient['id'],
-            'ingredient_name' => $ingredient['name'],
-            'unit' => $ingredient['unitShort'],
-            'original_unit' => $ingredient['original']
-        ];
-    }, $recipe['usedIngredients'] ?? []);
-
-    $formattedRecipe = [
-        'recipe_id' => $recipe['id'],
-        'missed_ingredients' => $missedIngredients,
-        'available_ingredients' => $availableIngredients,
-        'recipe_instructions' => $formattedSteps
-    ];
-    
-    
-
-    //$formattedRecipes[] = $formattedRecipe;
-    
-    $formattedRecipes = array();
-    $formattedRecipes['type'] = "push recipes";
-    $formattedRecipes['destination'] = "database";
-    $formattedRecipes['recipes'] = $formattedRecipe;
-}
-
-//file_put_contents('/home/parallels/formatted_recipes_combined_with_details.json', json_encode($formattedRecipes, JSON_PRETTY_PRINT));
-//echo "Formatted recipes with detailed instructions have been saved.\n";
+	{
+	$apiKey = 'af935f674c7243b59e152b70834a8dd3';
 	
- return $formattedRecipes;
+	$searchUrl = "https://api.spoonacular.com/recipes/findByIngredients?ingredients={$ingredients}&apiKey={$apiKey}&number=5";
+	
+	$curl = curl_init($searchUrl);
+	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+	$searchResponse = curl_exec($curl);
+	curl_close($curl);
+	$recipes = json_decode($searchResponse, true);
+	
+	$formattedRecipes = [];
+	
+	foreach ($recipes as $recipe) {
+	    // Second API call: Get Analyzed Recipe Instructions
+	    $instructionsUrl = "https://api.spoonacular.com/recipes/{$recipe['id']}/analyzedInstructions?apiKey={$apiKey}";
+	    curl_setopt_array($curl = curl_init($instructionsUrl), [
+	        CURLOPT_RETURNTRANSFER => true,
+	    ]);
+	    $instructionsResponse = curl_exec($curl);
+	    curl_close($curl);
+	    $instructionsData = json_decode($instructionsResponse, true);
+	
+	    // Extracting steps and equipment from the instructions
+	    $formattedSteps = [];
+	    foreach ($instructionsData as $block) {
+	        foreach ($block['steps'] as $step) {
+	            $stepDetails = [
+	                'number' => $step['number'],
+	                'step' => $step['step'],
+	            ];
+	
+	            $formattedSteps[] = $stepDetails;
+	        }
+	    }
+	
+	    // Format missed ingredients
+	    $missedIngredients = array_map(function ($ingredient) {
+	        return [
+	            'ingredient_id' => $ingredient['id'],
+	            'ingredient_name' => $ingredient['name'],
+	            'unit' => $ingredient['unitShort'],
+	            'original_unit' => $ingredient['original']
+	        ];
+	    }, $recipe['missedIngredients'] ?? []);
+	
+	    // Format used (available) ingredients
+	    $availableIngredients = array_map(function ($ingredient) {
+	        return [
+	            'ingredient_id' => $ingredient['id'],
+	            'ingredient_name' => $ingredient['name'],
+	            'unit' => $ingredient['unitShort'],
+	            'original_unit' => $ingredient['original']
+	        ];
+	    }, $recipe['usedIngredients'] ?? []);
+	
+	    $formattedRecipe = [
+	        'recipe_id' => $recipe['id'],
+	        'missed_ingredients' => $missedIngredients,
+	        'available_ingredients' => $availableIngredients,
+	        'recipe_instructions' => $formattedSteps
+	    ];
+	    
+	    
+	
+	    //$formattedRecipes[] = $formattedRecipe;
+	    
+	    $formattedRecipes = array();
+	    $formattedRecipes['type'] = "push recipes";
+	    $formattedRecipes['destination'] = "database";
+	    $formattedRecipes['recipes'] = $formattedRecipe;
+	}
+	
+	//file_put_contents('/home/parallels/formatted_recipes_combined_with_details.json', json_encode($formattedRecipes, JSON_PRETTY_PRINT));
+	//echo "Formatted recipes with detailed instructions have been saved.\n";
+		
+	 return $formattedRecipes;
 }
 
 
