@@ -68,8 +68,6 @@ function getRecipes($ingredients)
 	        'available_ingredients' => $availableIngredients,
 	        'recipe_instructions' => $formattedSteps
 	    ];
-	    
-	    
 	
 	    //$formattedRecipes[] = $formattedRecipe;
 	    
@@ -78,9 +76,6 @@ function getRecipes($ingredients)
 	    $formattedRecipes['destination'] = "database";
 	    $formattedRecipes['recipes'] = $formattedRecipe;
 	}
-	
-	//file_put_contents('/home/parallels/formatted_recipes_combined_with_details.json', json_encode($formattedRecipes, JSON_PRETTY_PRINT));
-	//echo "Formatted recipes with detailed instructions have been saved.\n";
 		
 	 return $formattedRecipes;
 }
