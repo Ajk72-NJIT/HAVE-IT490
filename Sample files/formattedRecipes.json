@@ -1,0 +1,581 @@
+{
+    "type": "push recipes",
+    "destination": "database",
+    "recipes": [
+        {
+            "recipe_id": 640352,
+            "title": "Cranberry Apple Crisp",
+            "missed_ingredients": [
+                {
+                    "ingredient_id": 9078,
+                    "ingredient_name": "cranberries",
+                    "unit": "cup",
+                    "original_unit": "2 cups fresh cranberries"
+                },
+                {
+                    "ingredient_id": 1145,
+                    "ingredient_name": "butter",
+                    "unit": "Tbs",
+                    "original_unit": "1\/2 stick (4 Tbs) unsalted butter, cut into cubes"
+                },
+                {
+                    "ingredient_id": 8120,
+                    "ingredient_name": "regular oats",
+                    "unit": "cup",
+                    "original_unit": "1 1\/2 cups regular oats (not quick-cooking)"
+                }
+            ],
+            "available_ingredients": [
+                {
+                    "ingredient_id": 1089003,
+                    "ingredient_name": "granny smith apples",
+                    "unit": "cup",
+                    "original_unit": "4 cups Granny Smith apples, chopped into \u00bd inch chunks"
+                }
+            ],
+            "recipe_instructions": [
+                {
+                    "number": 1,
+                    "step": "Preheat the oven to 350 degrees and grease or butter a 913 glass baking dish."
+                },
+                {
+                    "number": 2,
+                    "step": "In a large bowl, toss together the chopped apples, cranberries and sugar."
+                },
+                {
+                    "number": 3,
+                    "step": "Let stand for a few minutes then pour into the baking dish."
+                },
+                {
+                    "number": 4,
+                    "step": "Dot the mixture with the 1\/2 stick of cubed butter."
+                },
+                {
+                    "number": 5,
+                    "step": "In a medium bowl, combine the oats, brown sugar and flour."
+                },
+                {
+                    "number": 6,
+                    "step": "Sprinkle evenly over the cranberries and apples in the baking dish.  Gently pour the melted butter over the top."
+                },
+                {
+                    "number": 7,
+                    "step": "Cover with aluminum foil and bake for 35 minutes."
+                },
+                {
+                    "number": 8,
+                    "step": "Remove the foil and bake for an additional 15 minutes, or until the oat topping is nicely browned."
+                },
+                {
+                    "number": 9,
+                    "step": "Serve warm as a side or for dessert with a scoop of vanilla ice cream."
+                }
+            ]
+        },
+        {
+            "recipe_id": 632660,
+            "title": "Apricot Glazed Apple Tart",
+            "missed_ingredients": [
+                {
+                    "ingredient_id": 1145,
+                    "ingredient_name": "butter butter",
+                    "unit": "sticks",
+                    "original_unit": "1 1\/2 sticks cold unsalted butter cold unsalted butter<"
+                },
+                {
+                    "ingredient_id": 2010,
+                    "ingredient_name": "cinnamon",
+                    "unit": "tsp",
+                    "original_unit": "2 teaspoons cinnamon"
+                },
+                {
+                    "ingredient_id": 19719,
+                    "ingredient_name": "apricot preserves",
+                    "unit": "Tbsp",
+                    "original_unit": "2 tablespoons apricot preserves, melted and strained"
+                }
+            ],
+            "available_ingredients": [
+                {
+                    "ingredient_id": 1079003,
+                    "ingredient_name": "apples",
+                    "unit": "large",
+                    "original_unit": "4 larges red apples, such as Golden Delicious, peeled, cored and cut into 1\/4-inch-thick slices"
+                }
+            ],
+            "recipe_instructions": [
+                {
+                    "number": 1,
+                    "step": "In a food processor, pulse 1 1\/2 cups of the flour with the salt."
+                },
+                {
+                    "number": 2,
+                    "step": "Add the cold butter and process just until the butter is the size of peas, about 5 seconds."
+                },
+                {
+                    "number": 3,
+                    "step": "Sprinkle the ice water over the mixture and process just until moistened, about 5 seconds."
+                },
+                {
+                    "number": 4,
+                    "step": "Transfer the dough to a lightly floured work surface and knead 2 or 3 times, just until it comes together. Pat the dough into a disk. On a lightly floured work surface, roll out the dough into a 16- to 17-inch round about 1\/4 inch thick."
+                },
+                {
+                    "number": 5,
+                    "step": "Line a large baking sheet with parchment paper."
+                },
+                {
+                    "number": 6,
+                    "step": "Roll the dough around the rolling pin and unroll it onto the prepared baking sheet."
+                },
+                {
+                    "number": 7,
+                    "step": "In a small bowl, combine 2 tablespoons of the sugar with the remaining 1 tablespoon of flour and sprinkle over the dough. Arrange the apple slices on top in overlapping concentric circles to within 3 inches of the edge. Fold the dough over the apples in a free-form fashion."
+                },
+                {
+                    "number": 8,
+                    "step": "Brush the apples with the melted butter and sprinkle with the remaining 1 1\/2 tablespoons of sugar and cinnamon. Refrigerate the unbaked tart until slightly chilled, about 10 minutes."
+                },
+                {
+                    "number": 9,
+                    "step": "Preheat the oven to 40"
+                },
+                {
+                    "number": 10,
+                    "step": "Bake the tart in the center of the oven for 1 hour, or until the apples are tender and golden and the crust is deep golden and cooked through."
+                },
+                {
+                    "number": 11,
+                    "step": "Brush the apples with the melted preserves. Slide the parchment onto a wire rack and let the tart cool slightly before serving."
+                }
+            ]
+        },
+        {
+            "recipe_id": 641803,
+            "title": "Easy & Delish! ~ Apple Crumble",
+            "missed_ingredients": [
+                {
+                    "ingredient_id": 1001,
+                    "ingredient_name": "butter",
+                    "unit": "stick",
+                    "original_unit": "3\/4 stick of butter"
+                },
+                {
+                    "ingredient_id": 2011,
+                    "ingredient_name": "ground cloves",
+                    "unit": "Dash",
+                    "original_unit": "Dash of ground cloves"
+                },
+                {
+                    "ingredient_id": 9156,
+                    "ingredient_name": "lemon zest",
+                    "unit": "",
+                    "original_unit": "1 Zest of lemon"
+                }
+            ],
+            "available_ingredients": [
+                {
+                    "ingredient_id": 9003,
+                    "ingredient_name": "apples",
+                    "unit": "",
+                    "original_unit": "3 apples \u2013 sliced"
+                }
+            ],
+            "recipe_instructions": [
+                {
+                    "number": 1,
+                    "step": "Combine sliced apples, lemon zest, dash of ground cloves and sugar in a bowl and toss."
+                },
+                {
+                    "number": 2,
+                    "step": "Place in a deep dish buttered baking dish.In a smaller bowl combine the flour, sugar, brown sugar and butter."
+                },
+                {
+                    "number": 3,
+                    "step": "Mix this together with your fingers until it becomes crumbly."
+                },
+                {
+                    "number": 4,
+                    "step": "Place this mixture on top of the apples."
+                },
+                {
+                    "number": 5,
+                    "step": "Bake about 40-45 minutes, until the topping gets a little golden color."
+                }
+            ]
+        },
+        {
+            "recipe_id": 73420,
+            "title": "Apple Or Peach Strudel",
+            "missed_ingredients": [
+                {
+                    "ingredient_id": 18369,
+                    "ingredient_name": "baking powder",
+                    "unit": "tsp",
+                    "original_unit": "1 tsp baking powder"
+                },
+                {
+                    "ingredient_id": 2010,
+                    "ingredient_name": "cinnamon",
+                    "unit": "tsp",
+                    "original_unit": "1 tsp cinnamon"
+                },
+                {
+                    "ingredient_id": 1123,
+                    "ingredient_name": "egg",
+                    "unit": "",
+                    "original_unit": "1 egg"
+                }
+            ],
+            "available_ingredients": [
+                {
+                    "ingredient_id": 9003,
+                    "ingredient_name": "baking apples",
+                    "unit": "large",
+                    "original_unit": "6 large baking apples"
+                }
+            ],
+            "recipe_instructions": []
+        },
+        {
+            "recipe_id": 775666,
+            "title": "Easy Homemade Apple Fritters",
+            "missed_ingredients": [
+                {
+                    "ingredient_id": 18369,
+                    "ingredient_name": "baking powder",
+                    "unit": "tsp",
+                    "original_unit": "1 1\/2 teaspoons baking powder"
+                },
+                {
+                    "ingredient_id": 2010,
+                    "ingredient_name": "cinnamon",
+                    "unit": "tsp",
+                    "original_unit": "1 teaspoon cinnamon"
+                },
+                {
+                    "ingredient_id": 1123,
+                    "ingredient_name": "egg",
+                    "unit": "",
+                    "original_unit": "1 egg"
+                },
+                {
+                    "ingredient_id": 1077,
+                    "ingredient_name": "milk",
+                    "unit": "cup",
+                    "original_unit": "1\/3 cup milk"
+                }
+            ],
+            "available_ingredients": [
+                {
+                    "ingredient_id": 9003,
+                    "ingredient_name": "apple",
+                    "unit": "cup",
+                    "original_unit": "1 cup chopped apple"
+                }
+            ],
+            "recipe_instructions": [
+                {
+                    "number": 1,
+                    "step": "Combine flour, sugar, salt, baking powder, cinnamon. Stir in milk and egg until just combined. Fold in apple."
+                },
+                {
+                    "number": 2,
+                    "step": "Pour oil into skillet so that it is approximately 1 1\/2 deep."
+                },
+                {
+                    "number": 3,
+                    "step": "Heat oil on high. Oil is ready when a little dough thrown in floats to top. Carefully add dough to oil in heaping teaspoons. Cook until brown, about 2 minutes, then flip. Cook another 1-2 minutes, until both sides are browned."
+                },
+                {
+                    "number": 4,
+                    "step": "Transfer briefly to paper towels to absorb excess oil, then transfer to cooling rack. Make glaze by stirring milk and powdered sugar together in a small bowl."
+                },
+                {
+                    "number": 5,
+                    "step": "Drizzle over apple fritters. Wait approximately 3 minutes for glaze to harden, then flip fritters and drizzle glaze over the other side. Best served warm."
+                }
+            ]
+        },
+        {
+            "recipe_id": 641435,
+            "title": "Dessert Apple Rings With Cinnamon Cream Syrup",
+            "missed_ingredients": [
+                {
+                    "ingredient_id": 2010,
+                    "ingredient_name": "cinnamon",
+                    "unit": "tsp",
+                    "original_unit": "1\/2 tsp cinnamon"
+                },
+                {
+                    "ingredient_id": 19350,
+                    "ingredient_name": "corn syrup",
+                    "unit": "cup",
+                    "original_unit": "1\/2 cup corn syrup"
+                },
+                {
+                    "ingredient_id": 1124,
+                    "ingredient_name": "egg white",
+                    "unit": "large",
+                    "original_unit": "1 large egg white"
+                },
+                {
+                    "ingredient_id": 1052050,
+                    "ingredient_name": "vanilla",
+                    "unit": "Tbsp",
+                    "original_unit": "1 tablespoon vanilla"
+                }
+            ],
+            "available_ingredients": [
+                {
+                    "ingredient_id": 1089003,
+                    "ingredient_name": "granny smith apples",
+                    "unit": "large",
+                    "original_unit": "6 large Granny Smith apples, peeled"
+                }
+            ],
+            "recipe_instructions": [
+                {
+                    "number": 1,
+                    "step": "Whisk egg until frothy and the whisk in water and vanilla."
+                },
+                {
+                    "number": 2,
+                    "step": "Whisk in flour and salt and let sit while slicing apples.Slice peeled apples into 1\/2 inch thick slices (you will get about 4 slices per apple).Using varying sized biscuit cutters, cut rings out of apple slices, discarding smallest circle containing core."
+                },
+                {
+                    "number": 3,
+                    "step": "Heat oil to 375 degrees.Dip apple rings into batter, letting excess drip off.Cook in oil in small batches, turning frequently to monitor browning.When the rings turn golden brown, remove to a plate and while still hot sprinkle generously with cinnamon sugar."
+                },
+                {
+                    "number": 4,
+                    "step": "Serve immediately with warm drizzled sauce.Makes 16 apple rings  serves 4 to 6.CINNAMON CREAM SYRUPIn a small saucepan, combine 1 cup sugar, 1\/2 cup corn syrup and 1\/2 teaspoon cinnamon. Bring to a boil, stirring for 3 minutes."
+                },
+                {
+                    "number": 5,
+                    "step": "Remove from heat and cool for 5 minutes. Stir in 1\/2 cup evaporated milk."
+                },
+                {
+                    "number": 6,
+                    "step": "Serve warm."
+                }
+            ]
+        },
+        {
+            "recipe_id": 642608,
+            "title": "Fast Apple pie",
+            "missed_ingredients": [
+                {
+                    "ingredient_id": 18369,
+                    "ingredient_name": "baking powder",
+                    "unit": "tsp",
+                    "original_unit": "1 tsp baking powder"
+                },
+                {
+                    "ingredient_id": 2010,
+                    "ingredient_name": "cinnamon",
+                    "unit": "tsp",
+                    "original_unit": "2 tsp cinnamon"
+                },
+                {
+                    "ingredient_id": 4073,
+                    "ingredient_name": "margarine",
+                    "unit": "cup",
+                    "original_unit": "2 cups margarine"
+                },
+                {
+                    "ingredient_id": 1116,
+                    "ingredient_name": "yogurt",
+                    "unit": "cup",
+                    "original_unit": "1 cup yogurt"
+                }
+            ],
+            "available_ingredients": [
+                {
+                    "ingredient_id": 1089003,
+                    "ingredient_name": "granny smith apples",
+                    "unit": "lb",
+                    "original_unit": "4 pounds granny smith apples"
+                }
+            ],
+            "recipe_instructions": [
+                {
+                    "number": 1,
+                    "step": "First prepare the apples. Wash, peel and grate them."
+                },
+                {
+                    "number": 2,
+                    "step": "Place them in a stainless steel saucepan with sugar (I put about 6-8 tablespoons of sugar) and cook until soft. When they have released most of their juice, put the pan aside and add cinnamon and 1 sachet vanilla sugar.Dough: Margarine should be at room temperature. Put it in a bowl and mix it with yogurt.Gradually add the flour together with baking powder and 1 additional sachet vanilla to the margarine and yogurt and stir well by hand until the dough is not sticky."
+                },
+                {
+                    "number": 3,
+                    "step": "Let dough rest at least 30 minutes in the fridge. Take dough out and divide it into two EQUAL parts and stretch it with the rolling pin as long as the tray is (it SHOULD be a little bit bigger than the pan, because you will stretch it on the sides of the pan)"
+                },
+                {
+                    "number": 4,
+                    "step": "Put the parchment paper on the pan, add the dough, and finally add the apple filling."
+                },
+                {
+                    "number": 5,
+                    "step": "Place the second layer of dough on top.Preheat oven at 375 F and bake it about 30 minutes or until nicely brown.When ready, serve with powdered sugar."
+                }
+            ]
+        },
+        {
+            "recipe_id": 674272,
+            "title": "Grand Apple and Cinnamon Biscuits",
+            "missed_ingredients": [
+                {
+                    "ingredient_id": 18369,
+                    "ingredient_name": "baking powder",
+                    "unit": "Tbsp",
+                    "original_unit": "1 Tbsp baking powder"
+                },
+                {
+                    "ingredient_id": 1001,
+                    "ingredient_name": "butter",
+                    "unit": "cup",
+                    "original_unit": "1\/3 cup softened butter"
+                },
+                {
+                    "ingredient_id": 1077,
+                    "ingredient_name": "milk",
+                    "unit": "cup",
+                    "original_unit": "1 cup milk"
+                },
+                {
+                    "ingredient_id": 93784,
+                    "ingredient_name": "syrup",
+                    "unit": "servings",
+                    "original_unit": "Syrup"
+                }
+            ],
+            "available_ingredients": [
+                {
+                    "ingredient_id": 1089003,
+                    "ingredient_name": "granny smith apples",
+                    "unit": "",
+                    "original_unit": "2 Granny Smith Apples (or your favorite type of apple)"
+                }
+            ],
+            "recipe_instructions": [
+                {
+                    "number": 1,
+                    "step": "Preheat your oven to 40"
+                },
+                {
+                    "number": 2,
+                    "step": "In a large bowl mix together the flour, milk, baking powder, 1 Tbsp cinnamon sugar, and softened butter."
+                },
+                {
+                    "number": 3,
+                    "step": "Mix and stir until dough is formed.Cover a work surface with flour and knead your dough for one minute."
+                },
+                {
+                    "number": 4,
+                    "step": "Roll the dough out and use a circle cookie cutter or drinking glass rim to create your rounded dough biscuits.Peel the apples and cut them into small bite sized pieces.Take a piece of the biscuit dough and flatten it out a bit."
+                },
+                {
+                    "number": 5,
+                    "step": "Add in some apple pieces, sprinkle a little cinnamon sugar and then place another flattened dough biscuit on top. Then pinch the sides together."
+                },
+                {
+                    "number": 6,
+                    "step": "Sprinkle with a little more cinnamon sugar.Once all of the grand apple and cinnamon biscuits are made, place into the oven and bake for 13-15 minutes or until lightly brown."
+                },
+                {
+                    "number": 7,
+                    "step": "Remove from oven and place onto a cooling rack for a few minutes.When serving, add a few apples pieces to the top, sprinkle with a little more cinnamon sugar, and then cover with syrup."
+                }
+            ]
+        },
+        {
+            "recipe_id": 157103,
+            "title": "Apple Cinnamon Blondies",
+            "missed_ingredients": [
+                {
+                    "ingredient_id": 1001,
+                    "ingredient_name": "butter",
+                    "unit": "cup",
+                    "original_unit": "1\/2 cup butter, melted"
+                },
+                {
+                    "ingredient_id": 2010,
+                    "ingredient_name": "cinnamon",
+                    "unit": "tsp",
+                    "original_unit": "1 tsp. cinnamon"
+                },
+                {
+                    "ingredient_id": 1123,
+                    "ingredient_name": "egg",
+                    "unit": "",
+                    "original_unit": "1 egg"
+                },
+                {
+                    "ingredient_id": 1052050,
+                    "ingredient_name": "vanilla",
+                    "unit": "tsp",
+                    "original_unit": "1 tsp. vanilla (paste or extract)"
+                }
+            ],
+            "available_ingredients": [
+                {
+                    "ingredient_id": 9003,
+                    "ingredient_name": "apple",
+                    "unit": "cup",
+                    "original_unit": "1\/2 cup apple, finely diced"
+                }
+            ],
+            "recipe_instructions": [
+                {
+                    "number": 1,
+                    "step": "Check out the full recipe at Because I Like Chocolate."
+                }
+            ]
+        },
+        {
+            "recipe_id": 157111,
+            "title": "Vegan Baked Apples with Oat Crumble",
+            "missed_ingredients": [
+                {
+                    "ingredient_id": 2010,
+                    "ingredient_name": "cinnamon",
+                    "unit": "tsp",
+                    "original_unit": "\u00bd tsp. cinnamon"
+                },
+                {
+                    "ingredient_id": 10414037,
+                    "ingredient_name": "cognac",
+                    "unit": "Tbsp",
+                    "original_unit": "3 tbsp. cognac"
+                },
+                {
+                    "ingredient_id": 2025,
+                    "ingredient_name": "nutmeg",
+                    "unit": "tsp",
+                    "original_unit": "\u00bc tsp. nutmeg"
+                },
+                {
+                    "ingredient_id": 8120,
+                    "ingredient_name": "oats",
+                    "unit": "cup",
+                    "original_unit": "1 cup whole oats"
+                }
+            ],
+            "available_ingredients": [
+                {
+                    "ingredient_id": 9003,
+                    "ingredient_name": "apples",
+                    "unit": "",
+                    "original_unit": "3 apples, cored and halved horizontally"
+                }
+            ],
+            "recipe_instructions": [
+                {
+                    "number": 1,
+                    "step": "See full recipe at Because I Like Chocolate."
+                }
+            ]
+        }
+    ]
+}

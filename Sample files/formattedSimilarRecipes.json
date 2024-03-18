@@ -1,0 +1,158 @@
+{
+    "type": "push similar recipes",
+    "destination": "database",
+    "similar_recipes": [
+        {
+            "recipe_id": 56534,
+            "title": "Gluten Free Pine Nut and Date Pudding from the Grand Canyon Cook Book",
+            "ingredients": [
+                {
+                    "ingredient_name": "gluten free baking powder",
+                    "amount": 0.5,
+                    "unit": "tsps"
+                },
+                {
+                    "ingredient_name": "red gluten free bob's mill brown rice flour",
+                    "amount": 0.25,
+                    "unit": "cup"
+                },
+                {
+                    "ingredient_name": "big tree farm's coconut palm sugar",
+                    "amount": 0.25,
+                    "unit": "cup"
+                },
+                {
+                    "ingredient_name": "egg",
+                    "amount": 1,
+                    "unit": ""
+                },
+                {
+                    "ingredient_name": "medjool dates",
+                    "amount": 1,
+                    "unit": "cup"
+                },
+                {
+                    "ingredient_name": "whole pine nuts",
+                    "amount": 0.5,
+                    "unit": "cup"
+                },
+                {
+                    "ingredient_name": "salt",
+                    "amount": 0.5,
+                    "unit": "tsps"
+                },
+                {
+                    "ingredient_name": "stevia",
+                    "amount": 0.25,
+                    "unit": "cup"
+                }
+            ],
+            "recipe_instructions": [
+                {
+                    "number": 1,
+                    "step": "Heat oven to 350 degrees F."
+                },
+                {
+                    "number": 2,
+                    "step": "Mix sugar and eggs."
+                },
+                {
+                    "number": 3,
+                    "step": "Add dates, brown rice flour, salt, baking power, and pine nuts."
+                },
+                {
+                    "number": 4,
+                    "step": "Pour into a greased, shallow baking dish."
+                },
+                {
+                    "number": 5,
+                    "step": "Bake at 350 degrees for 30 minutes until golden brown."
+                }
+            ]
+        },
+        {
+            "recipe_id": 83321,
+            "title": "Chocolate And Vanilla Grand Marnier Torte",
+            "ingredients": [
+                {
+                    "ingredient_name": "bittersweet chocolate",
+                    "amount": 12,
+                    "unit": "ozs"
+                },
+                {
+                    "ingredient_name": "grand marnier",
+                    "amount": 3,
+                    "unit": "Tbsps"
+                },
+                {
+                    "ingredient_name": "heavy whipping cream",
+                    "amount": 1,
+                    "unit": "cup"
+                },
+                {
+                    "ingredient_name": "oranges",
+                    "amount": 4,
+                    "unit": ""
+                },
+                {
+                    "ingredient_name": "sugar",
+                    "amount": 1,
+                    "unit": "cup"
+                },
+                {
+                    "ingredient_name": "unsalted butter",
+                    "amount": 2,
+                    "unit": "Tbsps"
+                },
+                {
+                    "ingredient_name": "water",
+                    "amount": 1,
+                    "unit": "cup"
+                }
+            ],
+            "recipe_instructions": []
+        },
+        {
+            "recipe_id": 133204,
+            "title": "Decadant and Delicious French Grand Marnier Souffl\u00e9",
+            "ingredients": [
+                {
+                    "ingredient_name": "egg whites",
+                    "amount": 7,
+                    "unit": ""
+                },
+                {
+                    "ingredient_name": "egg yolks",
+                    "amount": 6,
+                    "unit": ""
+                },
+                {
+                    "ingredient_name": "grand marnier",
+                    "amount": 2,
+                    "unit": "fl oz"
+                },
+                {
+                    "ingredient_name": "milk",
+                    "amount": 2.113,
+                    "unit": "cups"
+                },
+                {
+                    "ingredient_name": "self raising flour",
+                    "amount": 1.75,
+                    "unit": "ounces"
+                },
+                {
+                    "ingredient_name": "caster sugar",
+                    "amount": 4,
+                    "unit": "ounces"
+                },
+                {
+                    "ingredient_name": "unsalted butter",
+                    "amount": 2.25,
+                    "unit": "ounces"
+                }
+            ],
+            "recipe_instructions": []
+        }
+    ]
+}
