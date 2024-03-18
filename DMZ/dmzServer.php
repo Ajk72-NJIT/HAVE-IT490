@@ -64,11 +64,6 @@ function getSimilarRecipes($recipe_id)
 	return $formattedSimilarRecipes;
 	}
 
-function getIngredients($ingredient_name)
-	{
-	
-	}
-
 function getRecipes($ingredientsArray)
 	{
 	$ingredients = implode(',', $ingredientsArray);
@@ -164,9 +159,6 @@ $callback = function ($msg) use ($channel) {
                 break;
             case "get similar recipes":
                 $response = getSimilarRecipes($request['recipe_id']);
-                break;
-            case "get ingredients":
-                $response = getIngredients($request['ingredients']);
                 break;
             default:
                 $response = ['success' => false, 'message' => "Request type not handled"];
