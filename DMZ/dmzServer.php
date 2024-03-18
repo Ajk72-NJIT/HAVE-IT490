@@ -9,138 +9,135 @@ $apiKey = 'af935f674c7243b59e152b70834a8dd3';
 
 function getSimilarRecipes($recipe_id)
 	{
-	$searchUrl = "https://api.spoonacular.com/recipes/$recipe_id/similar&number=3";
+	$searchUrl = "https://api.spoonacular.com/recipes/{$recipe_id}/similar?apiKey={$apiKey}";
 	$curl = curl_init($searchUrl);
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 	$searchResponse = curl_exec($curl);
 	curl_close($curl);
 	$similarRecipes = json_decode($searchResponse, true);
 
-	$similarRecipesDetails = [];
+	$formattedSimilarRecipes = [
+	'type' => "push similar recipes",
+	'destination' => "database",
+	'similar_recipes' => []
+	];
 
 	foreach ($similarRecipes as $similarRecipe) {
 
+		$curl = curl_init();
+	
 		$instructionsUrl = "https://api.spoonacular.com/recipes/{$similarRecipe['id']}/analyzedInstructions?apiKey={$apiKey}";
 		curl_setopt_array($curl = curl_init($instructionsUrl), [CURLOPT_RETURNTRANSFER => true]);
-        	$instructionsResponse = curl_exec($curl);
-        	$instructionsData = json_decode($instructionsResponse, true);
-		
+	        $instructionsResponse = curl_exec($curl);
+	        $instructionsData = json_decode($instructionsResponse, true);
+			
 		$ingredientsUrl = "https://api.spoonacular.com/recipes/{$similarRecipe['id']}/ingredientWidget.json?apiKey={$apiKey}";
 		curl_setopt_array($curl = curl_init($ingredientsUrl), [CURLOPT_RETURNTRANSFER => true]);
 		$ingredientsResponse = curl_exec($curl);
-        	$ingredientsData = json_decode($ingredientsResponse, true);
+		$ingredientsData = json_decode($ingredientsResponse, true);
+		
+		curl_close($curl);
 
 		$formattedSteps = [];
-	        foreach ($instructionsData as $instruction) {
-	            foreach ($instruction['steps'] as $step) {
-	                $formattedSteps[] = [
-	                    'number' => $step['number'],
-	                    'step' => $step['step'],
-			        ];
+        	foreach ($instructionsData as $instruction) {
+            		foreach ($instruction['steps'] as $step) {
+                		$formattedSteps[] = [
+                    		'number' => $step['number'],
+                    		'step' => $step['step'],
+		        	];
 			}
 		}
 		$ingredients = [];
-	        foreach ($ingredientsData['ingredients'] as $ingredient) {
-		        $ingredients[] = [
-		                //'ingredient_id' => $ingredient['id'],
-		                'ingredient_name' => $ingredient['name'],
-		                'amount' => $ingredient['amount']['us']['value'],
-				'unit' => $ingredient['amount']['us']['unit']
-		        ];
-	            }
+        	foreach ($ingredientsData['ingredients'] as $ingredient) {
+	        	$ingredients[] = [
+	                //'ingredient_id' => $ingredient['id'],
+	                'ingredient_name' => $ingredient['name'],
+	                'amount' => $ingredient['amount']['us']['value'],
+			'unit' => $ingredient['amount']['us']['unit']
+	        	];
+            	}
 
-		$formattedSimilarRecipe = [
-	            'recipe_id' => $similarRecipe['id'],
-		    'recipe_title' => $similarRecipe['title'],
-	            'ingredients' => $ingredients,
-	            'recipe_instructions' => $formattedSteps
-	            ];
-
-	$formattedSimilarRecipes = array();
-	$formattedSimilarRecipes['type'] = "push similar recipes";
-	$formattedSimilarRecipes['destination'] = "database";
-	$formattedSimilarRecipes['similar_recipes'] = $formattedSimilarRecipe;
+		$formattedSimilarRecipes['similar_recipes'][] = [
+		'recipe_id' => $similarRecipe['id'],
+        	'title' => $similarRecipe['title'],
+        	'ingredients' => $ingredients,
+        	'recipe_instructions' => $formattedSteps
+		];
 	}
 	return $formattedSimilarRecipes;
-	}
+}
 
 function getRecipes($ingredientsArray)
 	{
 	$ingredients = implode(',', $ingredientsArray);
-	$searchUrl = "https://api.spoonacular.com/recipes/findByIngredients?ingredients={$ingredients}&apiKey={$apiKey}&number=5";
+	$searchUrl = "https://api.spoonacular.com/recipes/findByIngredients?ingredients={$ingredients}&apiKey={$apiKey}";
 	$curl = curl_init($searchUrl);
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 	$searchResponse = curl_exec($curl);
 	curl_close($curl);
 	$recipes = json_decode($searchResponse, true);
-	
-	$formattedRecipes = [];
-	
+
+	$formattedRecipes = [
+		'type' => "push recipes",
+		'destination' => "database",
+		'recipes' => []
+	];
+
 	foreach ($recipes as $recipe) {
-	    $instructionsUrl = "https://api.spoonacular.com/recipes/{$recipe['id']}/analyzedInstructions?apiKey={$apiKey}";
-	    curl_setopt_array($curl = curl_init($instructionsUrl), [
-	        CURLOPT_RETURNTRANSFER => true,
-	    ]);
-	    $instructionsResponse = curl_exec($curl);
-	    curl_close($curl);
-	    $instructionsData = json_decode($instructionsResponse, true);
+		$instructionsUrl = "https://api.spoonacular.com/recipes/{$recipe['id']}/analyzedInstructions?apiKey={$apiKey}";
+		curl_setopt_array($curl = curl_init($instructionsUrl), [
+		CURLOPT_RETURNTRANSFER => true,
+    		]);
+    		$instructionsResponse = curl_exec($curl);
+    		curl_close($curl);
+    		$instructionsData = json_decode($instructionsResponse, true);
+
+    		$formattedSteps = [];
+    		foreach ($instructionsData as $block) {
+        		foreach ($block['steps'] as $step) {
+            			$stepDetails = [
+                		'number' => $step['number'],
+                		'step' => $step['step'],
+            			];
 	
-	    $formattedSteps = [];
-	    foreach ($instructionsSteps as $ins) {
-	        foreach ($ins['steps'] as $step) {
-	            $stepDetails = [
-	                'number' => $step['number'],
-	                'step' => $step['step'],
-	            ];
+            			$formattedSteps[] = $stepDetails;
+       			}
+    		}
 	
-	            $formattedSteps[] = $stepDetails;
-	        }
-	    }
-	
-	    // Format missed ingredients
-	    $missedIngredients = array_map(function ($ingredient) {
-	        return [
-	            'ingredient_id' => $ingredient['id'],
-	            'ingredient_name' => $ingredient['name'],
-	            'unit' => $ingredient['unitShort'],
-	            'original_unit' => $ingredient['original']
-	        ];
-	    }, $recipe['missedIngredients'] ?? []);
-	
-	    // Format used (available) ingredients
-	    $availableIngredients = array_map(function ($ingredient) {
-	        return [
-	            'ingredient_id' => $ingredient['id'],
-	            'ingredient_name' => $ingredient['name'],
-	            'unit' => $ingredient['unitShort'],
-	            'original_unit' => $ingredient['original']
-	        ];
-	    }, $recipe['usedIngredients'] ?? []);
-	
-	    $formattedRecipe = [
-	        'recipe_id' => $recipe['id'],
-		'recipe_title' => $recipe['title'],
-	        'missed_ingredients' => $missedIngredients,
-	        'available_ingredients' => $availableIngredients,
-	        'recipe_instructions' => $formattedSteps
-	    ];
-	
-	    //$formattedRecipes[] = $formattedRecipe;
-	    
-	    $formattedRecipes = array();
-	    $formattedRecipes['type'] = "push recipes";
-	    $formattedRecipes['destination'] = "database";
-	    $formattedRecipes['recipes'] = $formattedRecipe;
+    		$missedIngredients = array_map(function ($ingredient) {
+        		return [
+            		'ingredient_id' => $ingredient['id'],
+            		'ingredient_name' => $ingredient['name'],
+            		'unit' => $ingredient['unitShort'],
+            		'original_unit' => $ingredient['original']
+        		];
+    		}, $recipe['missedIngredients'] ?? []);
+
+    		$availableIngredients = array_map(function ($ingredient) {
+        		return [
+	                'ingredient_id' => $ingredient['id'],
+	            	'ingredient_name' => $ingredient['name'],
+	            	'unit' => $ingredient['unitShort'],
+	            	'original_unit' => $ingredient['original']
+	        	];
+    		}, $recipe['usedIngredients'] ?? []);
+
+    		$formattedRecipes['recipes'][] = [
+        	'recipe_id' => $recipe['id'],
+        	'title' => $recipe['title'],
+        	'missed_ingredients' => $missedIngredients,
+        	'available_ingredients' => $availableIngredients,
+        	'recipe_instructions' => $formattedSteps
+    		];
 	}
-		
-	 return $formattedRecipes;
+		return $formattedRecipes;
 }
 
 
 $connection = new AMQPStreamConnection('172.23.62.86', 5672, 'test', 'test', 'testHost');
 $channel = $connection->channel();
 
-$channel->queue_declare('dataQueue', false, true, false, false);
+$channel->queue_declare('dmzQueue', false, true, false, false);
 
 echo "\ntestRabbitMQServer BEGIN".PHP_EOL;
 
@@ -180,7 +177,7 @@ $callback = function ($msg) use ($channel) {
 };
 
 $channel->basic_qos(null, 1, null);
-$channel->basic_consume('dataQueue', '', false, true, false, false, $callback);
+$channel->basic_consume('dmzQueue', '', false, true, false, false, $callback);
 
 try {
     while (true) {
