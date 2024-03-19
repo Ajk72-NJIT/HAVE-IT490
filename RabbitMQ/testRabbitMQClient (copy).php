@@ -30,7 +30,7 @@ require_once('rabbitMQLib.inc');
         )
     );
 
-    $channel->basic_publish($msg, '', 'dataQueue');
+    $channel->basic_publish($msg, '', $queue);
 
     echo "---------------------------------------\n";
     echo "Sending Message".PHP_EOL;
