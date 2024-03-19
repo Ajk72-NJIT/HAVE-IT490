@@ -33,6 +33,9 @@ function requestProcessor($request)
     case "database":
 	    return goDatabase($request);
 	    break;
+    case "dmz":
+    	    return goDMZ($request);
+    	    break;
     case "frontend":
     	    return $request;
     	    break;
