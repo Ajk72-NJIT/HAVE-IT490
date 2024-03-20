@@ -69,14 +69,19 @@ function getSimilarRecipes($recipe_id)
 
 function getRecipes($ingredientsArray)
 	{
+	$testArray = array("flour", "sour cream", "egg");
+	$apiKey = '387e3a938f4d43498d83792b5767c4e8';
 	$ingredients = implode(',', $ingredientsArray);
-	$searchUrl = "https://api.spoonacular.com/recipes/findByIngredients?ingredients={$ingredients}&apiKey={$apiKey}";
+	$searchUrl = "https://api.spoonacular.com/recipes/findByIngredients?ingredients=$ingredients&apiKey=$apiKey&number=3&ranking=2";
 	$curl = curl_init($searchUrl);
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 	$searchResponse = curl_exec($curl);
 	curl_close($curl);
+	
 	$recipes = json_decode($searchResponse, true);
-
+	var_dump ($recipes);
+	
+	
 	$formattedRecipes = [
 		'type' => "push recipes",
 		'destination' => "database",
@@ -130,7 +135,7 @@ function getRecipes($ingredientsArray)
         	'recipe_instructions' => $formattedSteps
     		];
 	}
-		return $formattedRecipes;
+		 return array ("destination" => 'frontend', "message" => $formattedRecipes);
 }
 
 
@@ -151,7 +156,7 @@ $callback = function ($msg) use ($channel) {
 
     try {
         switch ($request['type']) {
-            case "get recipes":
+            case "getFridgeRecipe":
                 $response = getRecipes($request['ingredients']);
                 break;
             case "get similar recipes":
