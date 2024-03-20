@@ -9,7 +9,7 @@ body, h1, form, input, button {
 
 /* Container styling */
 .container {
-    max-width: 400px;
+    max-width: 600px;
     margin: 50px auto;
     padding: 20px;
     background-color: #f8f9fa;
