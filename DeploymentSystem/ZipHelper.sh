@@ -31,7 +31,7 @@ ZIPNAME="HAVEFRIDGE v$VERSION.zip"
 #cd "$COPYTO"
 
 echo "Zipping files..."
-zip -r "$ZIPNAME" .
+zip -r "$ZIPNAME" . -x "*.zip"
 
 echo "files copied"
 
