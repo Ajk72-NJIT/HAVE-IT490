@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Define remote hosts and user
 VMS=("10.211.55.5") #separate by space
 USER="parallels"
 COPYFROM="/home/parallels/CopyFrom"
