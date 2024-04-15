@@ -19,17 +19,10 @@ require_once('rabbitMQLib.inc');
 
     // Generate a unique correlation ID for this request
     $corrId = uniqid();
-    
-    $prevmsg = array();
-    $prevmsg['type'] = "Login";
-    $prevmsg['username'] = $username;
-    $prevmsg['password'] = $password;
-   // $prevmsg['username'] = 'username test';
-    //$prevmsg['password'] = 'password Test';
-    $prevmsg['message'] = "to database";
+   
 
     $msg = new AMQPMessage(
-        json_encode($prevmsg),
+        json_encode($request),
         array(
             'correlation_id' => $corrId,
             'reply_to' => $callbackQueue,
@@ -37,7 +30,7 @@ require_once('rabbitMQLib.inc');
         )
     );
 
-    $channel->basic_publish($msg, '', 'dataQueue');
+    $channel->basic_publish($msg, '', $queue);
 
     echo "---------------------------------------\n";
     echo "Sending Message".PHP_EOL;
