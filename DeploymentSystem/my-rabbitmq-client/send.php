@@ -6,12 +6,21 @@ use PhpAmqpLib\Message\AMQPMessage;
 $connection = new AMQPStreamConnection('localhost', 5672, 'guest', 'guest');
 $channel = $connection->channel();
 
-$channel->queue_declare('hello', false, false, false, false);
+$input = fopen ("php://stdin","r");
+$input_clean = trim(fgets($input));
 
-$msg = new AMQPMessage('Hello World!');
-$channel->basic_publish($msg, '', 'hello');
+if($input_clean == "QA"){
+	$q = "QA";
+} else if ($input_clean == "PROD"){
+	$q = "PROD";
+};
 
-echo " [x] Sent 'Hello World!'\n";
+$channel->queue_declare($q, false, false, false, false);
+
+$msg = new AMQPMessage($input_clean);
+$channel->basic_publish($msg, '', $q);
+
+echo " ~ Sent to $input_clean\n";
 
 $channel->close();
 $connection->close();
