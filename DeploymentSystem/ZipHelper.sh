@@ -5,6 +5,12 @@ USER="parallels"
 COPYFROM="/home/parallels/CopyFrom"
 COPYTO="/home/parallels/CopyTo"
 
+#DB 
+DB_USER="root"
+DB_PASSWORD="sinnlig31"
+DB="deploymentdb"
+DB_HOST="localhost"
+
 mkdir -p "$COPYTO"
 cd "$COPYTO"
 #Loop through hosts to find and copy files
@@ -33,5 +39,9 @@ ZIPNAME="HAVEFRIDGE v$VERSION.zip"
 echo "Zipping files..."
 zip -r "$ZIPNAME" . -x "*.zip"
 
-echo "files copied"
+mysql -u "$DB_USER" -p"$DB_PASSWORD" "$DB" <<EOF
+INSERT INTO bundle (bundle_name, version) VALUES ('$ZIPNAME', '$VERSION');
+EOF
+
+echo "files copied and inserted into DB"
 
