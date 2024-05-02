@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FROM_IP="10.211.55.6"
+FROM_IP="10.211.55.6" #Deployment system
 USER="parallels"
 COPYFROM="/home/parallels/CopyFrom"
 COPYTO="/home/parallels/CopyTo"
