@@ -16,8 +16,10 @@ if($input_clean == "QA"){
 	$q = "PROD_PUSH";
 };
 
+fclose($input);
+
 $version = fopen ("php://stdin","r");
-$version_clean = trim(fgets($version_clean));
+$version_clean = trim(fgets($version));
 
 $channel->exchange_declare($q, 'fanout', false, false, false);
 #$channel->queue_declare($q, false, false, false, false);

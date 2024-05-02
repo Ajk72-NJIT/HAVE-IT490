@@ -28,10 +28,10 @@ for HOST in "${VMS[@]}"; do
 done
 
 VERSION=1
-while [[ -f "HAVEFRIDGE v$VERSION.zip" ]]; do
+while [[ -f "HAVEFRIDGEv$VERSION.zip" ]]; do
     ((VERSION++))
 done
-ZIPNAME="HAVEFRIDGE v$VERSION.zip"
+ZIPNAME="HAVEFRIDGEv$VERSION.zip"
 
 #Zip files
 #cd "$COPYTO"
