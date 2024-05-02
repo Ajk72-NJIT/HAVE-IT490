@@ -16,10 +16,11 @@ if($input_clean == "QA"){
 	$q = "PROD";
 };
 
-$channel->queue_declare($q, false, false, false, false);
+$channel->exchange_declare($q, 'fanout', false, false, false);
+#$channel->queue_declare($q, false, false, false, false);
 
 $msg = new AMQPMessage($input_clean);
-$channel->basic_publish($msg, '', $q);
+$channel->basic_publish($msg, $q);
 
 echo " ~ Sent to $input_clean\n";
 

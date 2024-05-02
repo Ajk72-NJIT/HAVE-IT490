@@ -1,9 +1,9 @@
 #!/bin/bash
 
-VMS=("DMZ:10.211.55.5") #separate by space
+VMS=("DMZ:10.211.55.5" "DBR:10.211.55.5" "FRE:10.211.55.7") #separate by space, identify by 3 characters
 USER="parallels"
-COPYFROM="/home/parallels/CopyFrom"
-COPYTO="/home/parallels/CopyTo"
+COPYFROM="/home/parallels/HAVE-FRIDGE"
+COPYTO="/home/parallels/HAVE-FRIDGE"
 
 #DB 
 DB_USER="root"
