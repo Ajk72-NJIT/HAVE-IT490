@@ -5,7 +5,11 @@ use PhpAmqpLib\Connection\AMQPStreamConnection;
 $connection = new AMQPStreamConnection('10.211.55.6', 5672, 'dmz', 'dmz');
 $channel = $connection->channel();
 
-$channel->queue_declare('QA', false, false, false, false);
+$q = 'DMZ.QA';
+
+$channel->queue_declare($q, false, false, false, false);
+
+$channel->queue_bind($q, 'QA_PUSH');
 
 echo " ... Waiting for messages\n";
 
@@ -16,7 +20,7 @@ $callback = function($msg) {
   echo "$output";
 };
 
-$channel->basic_consume('QA', '', false, true, false, false, $callback);
+$channel->basic_consume($q, '', false, true, false, false, $callback);
 
 while($channel->is_consuming()) {
     $channel->wait();

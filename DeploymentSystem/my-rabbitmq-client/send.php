@@ -11,9 +11,9 @@ echo "(QA/PROD)?";
 $input_clean = trim(fgets($input));
 
 if($input_clean == "QA"){
-	$q = "QA";
+	$q = "QA_PUSH";
 } else if ($input_clean == "PROD"){
-	$q = "PROD";
+	$q = "PROD_PUSH";
 };
 
 $channel->exchange_declare($q, 'fanout', false, false, false);
