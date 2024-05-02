@@ -16,10 +16,13 @@ if($input_clean == "QA"){
 	$q = "PROD_PUSH";
 };
 
+$version = fopen ("php://stdin","r");
+$version_clean = trim(fgets($version_clean));
+
 $channel->exchange_declare($q, 'fanout', false, false, false);
 #$channel->queue_declare($q, false, false, false, false);
 
-$msg = new AMQPMessage($input_clean);
+$msg = new AMQPMessage($version_clean);
 $channel->basic_publish($msg, $q);
 
 echo " ~ Sent to $input_clean\n";
