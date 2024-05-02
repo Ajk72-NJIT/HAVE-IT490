@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VMS=("DMZ:10.211.55.5" "DBR:10.211.55.5" "FRE:10.211.55.7") #separate by space, identify by 3 characters
+VMS=("DMZ:10.211.55.4" "DBR:10.211.55.5" "FRE:10.211.55.7") #separate by space, identify by 3 characters
 USER="parallels"
 COPYFROM="/home/parallels/HAVE-FRIDGE"
 COPYTO="/home/parallels/HAVE-FRIDGE"
