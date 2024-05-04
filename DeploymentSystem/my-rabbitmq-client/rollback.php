@@ -11,16 +11,15 @@ echo "Rollback to (QA/PROD)?";
 $input_clean = trim(fgets($input));
 
 if($input_clean == "QA"){
-	$q = "QA";
+	$q = "QA_ROLLBACK";
 } else if ($input_clean == "PROD"){
-	$q = "PROD";
+	$q = "PROD_ROLLBACK";
 };
 
-$channel->queue_declare($q, false, false, false, false);
+$channel->exchange_declare($q, 'fanout', false, false, false);
+#$channel->queue_declare($q, false, false, false, false);
 
-$msg = new AMQPMessage($input_clean);
-
-include "mysqlconnect.php";
+include 'mysqlconnect.php';
 
 $sql = "SELECT bundle_name FROM bundle WHERE state = 'PASS' ORDER BY created_date DESC LIMIT 1;";
 
@@ -33,9 +32,10 @@ if ($result->num_rows > 0) {
     echo "Most recent 'PASS' bundle name: " . $row['bundle_name'];
 } else {
     echo "No results found";
-}
+};
 
-$channel->basic_publish($msg, '', $bundle_name);
+$msg = new AMQPMessage($bundle_name);
+$channel->basic_publish($msg, $q);
 
 echo "\n ~ Sent to $input_clean\n";
 
