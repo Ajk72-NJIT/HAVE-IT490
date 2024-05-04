@@ -2,7 +2,7 @@
 require_once __DIR__ . '/vendor/autoload.php';
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 
-$connection = new AMQPStreamConnection('10.211.55.6', 5672, 'dmz', 'dmz');
+$connection = new AMQPStreamConnection('10.211.55.6', 5672, 'qadmz', 'qadmz');
 $channel = $connection->channel();
 
 $q = 'DMZ.QA';
@@ -15,7 +15,7 @@ echo " ... Waiting for messages\n";
 
 $callback = function($msg) {
   echo " ~ Received ", $msg->body, "\n";
-  $copyScript = '/home/parallels/HAVE-IT490/DeploymentSystem/DMZcopy.sh';
+  $copyScript = "/home/parallels/DMZcopy.sh {$msg->body}";
   $output = shell_exec($copyScript);
   echo "$output";
 };
