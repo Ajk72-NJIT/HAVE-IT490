@@ -28,7 +28,7 @@ $RecipeArray = $response['message']['recipes'];
 
 <html>
 <head>
-    <title>Login Page</title>
+    <title>Recipes</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>

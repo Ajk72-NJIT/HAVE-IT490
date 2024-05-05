@@ -25,7 +25,7 @@ $ingredientArray = $response['message'];
 
 <html>
 <head>
-    <title>Landing Page</title>
+    <title>Landing</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>

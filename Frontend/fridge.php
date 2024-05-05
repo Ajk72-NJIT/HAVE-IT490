@@ -21,19 +21,19 @@ $fridgeArray = $response['message'];
 if ($response['authed'] == "not authed"){
 	header('Location: home.php');
 }else{	
-} 
+}
 ?>
 
 
 
 <html>
 <head>
-    <title>Login Page</title>
+    <title>Contents</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-	<h1 class="title">fridge contents: </h1>
+	<h1 class="title">Fridge Contents</h1>
 	<?php
 		
 		foreach($fridgeArray as $item){	
@@ -45,7 +45,7 @@ if ($response['authed'] == "not authed"){
 
         ?>
         <form action="testRabbitMQClient.php" method="POST" class="login-form">
-        	<button type="submit" name = "landing" class="submit-button">return to landing</button>
+        	<button type="submit" name = "landing" class="submit-button">Return to Landing</button>
         </form>
     </div> 
 </body>
