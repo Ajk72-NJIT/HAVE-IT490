@@ -11,13 +11,13 @@ function filterIngredients() {
             options[i].style.display = "none";
         }
     }
-    document.querySelector('.dropdown-content').classList.add("show");
+    document.querySelector('.dropdown-content').style.display = "block";
 }
-
 
 function fillInput(value) {
     document.getElementById("ingredientInput").value = value;
-    document.querySelector('.dropdown-content').classList.remove("show");
+    // Hide the dropdown content
+    document.querySelector('.dropdown-content').style.display = "none";
 }
 
 window.onclick = function(event) {
