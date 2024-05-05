@@ -4,8 +4,8 @@ sudo scp rabbit.service /etc/systemd/system/
 
 sudo systemctl daemon-reload
 
-sudo systemctl enable dmz
+sudo systemctl enable rabbit
 
-sudo systemctl start dmz
+sudo systemctl start rabbit
 
-sudo systemctl status dmz
+sudo systemctl status rabbit
