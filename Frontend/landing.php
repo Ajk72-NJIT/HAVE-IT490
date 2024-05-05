@@ -36,14 +36,14 @@ $ingredientArray = $response['message'];
         <div class="input-group">
             <div class="dropdown">
                 <input value = '' type="text" name = "ingredientInput" id="ingredientInput" class="input-field" oninput="filterIngredients()" placeholder="Search for ingredients...">
-		            <div id="ingredientDropdown" class="dropdown-content">
-                    <?php
-                        foreach($ingredientArray as $item){
-                            echo "<a href='#' onclick=\"fillInput('$item')\">$item</a>";
-                        }
+		            <div class="dropdown-content">
+                        <?php
+                            foreach($ingredientArray as $item){
+                                echo "<a href='#' onclick=\"fillInput('$item')\">$item</a>";
+                            }
 
-                    ?>
-                </div>
+                        ?>
+                    </div>
             </div>
         </div>
         <button type="submit" name = "addFridge" class="submit-button">Add to Fridge</button>
@@ -52,61 +52,6 @@ $ingredientArray = $response['message'];
         <button type="submit" name="logout" class="logout-button">Logout</button>
         </form>
     </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <script>
-        function filterIngredients() {
-            var input, filter, dropdown, options, i, txtValue;
-            input = document.getElementById("ingredientInput");
-            filter = input.value.toUpperCase();
-            dropdown = document.getElementById("ingredientDropdown");
-            options = dropdown.getElementsByTagName("a");
-            for (i = 0; i < options.length; i++) {
-                txtValue = options[i].textContent || options[i].innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    options[i].style.display = "";
-                } else {
-                    options[i].style.display = "none";
-                }
-            }
-            dropdown.classList.add("show");
-        }
-
-        function fillInput(value) {
-            document.getElementById("ingredientInput").value = value;
-            document.getElementById("ingredientDropdown").classList.remove("show");
-        }
-
-        window.onclick = function(event) {
-            if (!event.target.matches('.input-field')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                for (var i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="scripts/scripts.js"></script>
 </body>
 </html>

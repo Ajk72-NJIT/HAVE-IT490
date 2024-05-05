@@ -40,6 +40,18 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Dropdown styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    max-height: 150px; /* Limit dropdown height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #ddd;
+    z-index: 1;
+}
+
 /* Header styling */
 .title {
     text-align: center;
@@ -73,7 +85,7 @@ button {
     padding: 12px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-bottom: 25px; /* Increased margin bottom */
+    margin-bottom: 0px; /* Increased margin bottom */
     margin-top: 20px; /* Increased margin top */
     width: 100%; /* Ensure buttons take up full width */
 }
