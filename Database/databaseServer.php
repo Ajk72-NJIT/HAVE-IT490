@@ -47,6 +47,9 @@ function getFridgeRecipe($request)
 	
 	$result = $mydb->query($query2);
 	$fridgelist = [];
+	
+	var_dump($fridgelist);
+	
 	if ($result->num_rows > 0)
 	{
 		while($rows = $result->fetch_assoc())
@@ -56,6 +59,8 @@ function getFridgeRecipe($request)
 			array_push($fridgelist, $ingredientName);
 		}
 	}
+	var_dump($fridgelist);
+	
 	return array ("type" => 'getFridgeRecipe', "destination" => 'dmz', 'ingredients' => $fridgelist);
 	
 	
@@ -217,7 +222,7 @@ function doAuth($username, $token){
 	echo "\n";
 	$currentTime = time();
 	$query = "SELECT username ,sessionToken, expire from accounts
-	WHERE username = '$username' AND sessionToken = '$token' AND expire < NOW() ";
+	WHERE username = '$username' AND sessionToken = '$token'"; # AND expire < NOW() 
 	$result = $mydb->query($query);
 	if ($result->num_rows > 0){
 		return "authed";
@@ -229,7 +234,7 @@ function doAuth($username, $token){
 
 
 
-$connection = new AMQPStreamConnection('172.23.62.86', 5672, 'test', 'test', 'testHost');
+$connection = new AMQPStreamConnection('localhost', 5672, 'test', 'test', 'testHost');
 $channel = $connection->channel();
 
 $channel->queue_declare('dataQueue', false, true, false, false);
