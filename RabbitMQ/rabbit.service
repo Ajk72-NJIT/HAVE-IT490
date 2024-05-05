@@ -1,0 +1,12 @@
+[Unit]
+Description=Runs rabbit server setup
+After=rabbitmq-server.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/parallels/HAVE-IT490/DMZ
+ExecStart=/usr/bin/php /home/parallels/HAVE-IT490/DMZ/testRabbitMQServer.php
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
