@@ -1,0 +1,12 @@
+[Unit]
+Description=Runs DMZ server setup
+After=rabbitmq-server.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/alex/HAVE-IT490/DMZ
+ExecStart=/usr/bin/php /home/alex/HAVE-IT490/DMZ/dmzServer.php
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
