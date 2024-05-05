@@ -139,7 +139,7 @@ function getRecipes($ingredientsArray)
 }
 
 
-$connection = new AMQPStreamConnection('172.23.62.86', 5672, 'test', 'test', 'testHost');
+$connection = new AMQPStreamConnection('10.211.55.5', 5672, 'test', 'test', 'testHost');
 $channel = $connection->channel();
 
 $channel->queue_declare('dmzQueue', false, true, false, false);

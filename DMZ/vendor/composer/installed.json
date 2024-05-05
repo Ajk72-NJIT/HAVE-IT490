@@ -1,14 +1,9 @@
 {
-    "_readme": [
-        "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
-        "This file is @generated automatically"
-    ],
-    "content-hash": "61076195b24d7c6b45a8eaf83bbc342d",
     "packages": [
         {
             "name": "php-amqplib/php-amqplib",
             "version": "v2.12.1",
+            "version_normalized": "2.12.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-amqplib/php-amqplib.git",
@@ -38,12 +33,14 @@
                 "phpunit/phpunit": "^5.7|^6.5|^7.0",
                 "squizlabs/php_codesniffer": "^2.5"
             },
+            "time": "2020-09-25T18:34:58+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "2.12-dev"
                 }
             },
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "PhpAmqpLib\\": "PhpAmqpLib/"
@@ -85,11 +82,12 @@
                 "issues": "https://github.com/php-amqplib/php-amqplib/issues",
                 "source": "https://github.com/php-amqplib/php-amqplib/tree/v2.12.1"
             },
-            "time": "2020-09-25T18:34:58+00:00"
+            "install-path": "../php-amqplib/php-amqplib"
         },
         {
             "name": "phpseclib/phpseclib",
             "version": "2.0.47",
+            "version_normalized": "2.0.47.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
@@ -116,7 +114,9 @@
                 "ext-openssl": "Install the OpenSSL extension in order to speed up a wide variety of cryptographic operations.",
                 "ext-xml": "Install the XML extension to load XML formatted public keys."
             },
+            "time": "2024-02-26T04:55:38+00:00",
             "type": "library",
+            "installation-source": "dist",
             "autoload": {
                 "files": [
                     "phpseclib/bootstrap.php"
@@ -195,16 +195,9 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-02-26T04:55:38+00:00"
+            "install-path": "../phpseclib/phpseclib"
         }
     ],
-    "packages-dev": [],
-    "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
-    "prefer-stable": false,
-    "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "dev": true,
+    "dev-package-names": []
 }
