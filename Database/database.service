@@ -1,11 +1,11 @@
 [Unit]
 Description=Runs database server setup
-After=rabbitmq-server.service
+After=rabbit.service
 
 [Service]
 Type=simple
-WorkingDirectory=/home/parallels/HAVE-IT490/Database
-ExecStart=/usr/bin/php /home/parallels/HAVE-IT490/Database/databaseServer.php
+WorkingDirectory=/home/parallel/HAVE-IT490/Database
+ExecStart=/usr/bin/php /home/parallel/HAVE-IT490/Database/databaseServer.php
 Restart=always
 
 [Install]

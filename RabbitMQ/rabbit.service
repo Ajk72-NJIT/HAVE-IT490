@@ -4,8 +4,8 @@ After=rabbitmq-server.service
 
 [Service]
 Type=simple
-WorkingDirectory=/home/parallels/HAVE-IT490/DMZ
-ExecStart=/usr/bin/php /home/parallels/HAVE-IT490/DMZ/testRabbitMQServer.php
+WorkingDirectory=/home/parallel/HAVE-IT490/RabbitMQ
+ExecStart=/usr/bin/php /home/parallel/HAVE-IT490/RabbitMQ/testRabbitMQServer.php
 Restart=always
 
 [Install]
