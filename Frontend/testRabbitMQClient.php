@@ -5,6 +5,11 @@ require_once('path.inc');
 require_once('get_host_info.inc');
 require_once('rabbitMQLib.inc');
 
+var_dump($_POST);
+
+#$_POST['username'] = 'cobra';
+#$_POST['password'] = 'cobra';
+#$_POST['landing'] = '';
 
 if (isset($_POST['dislike'])){
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
@@ -82,6 +87,9 @@ if (isset($_POST['addFridge'])){
 	$request['quantity'] = 1;
 	
 	$response = $client->send_request($request);
+	
+	var_dump($response);
+	
 	if ($response['authed'] == "not authed"){
 	header('Location: home.php');
 	}
@@ -106,6 +114,9 @@ if (isset($_POST['login'])){
 	$request['message'] = 'Login request';
 	
 	$response = $client->send_request($request);
+	
+	var_dump($response);
+	
 	if ($response['message'] === "Account found"){
 		$_SESSION["name"] = $response['username'];
 		$_SESSION["token"] = $response['token'];
@@ -143,9 +154,12 @@ if (isset($_POST['register'])){
 		$request['username'] = $_POST["username"];
 		$request['password'] = $_POST["password"];
 		$request['email'] = $_POST["email"];
-
+		
+		var_dump($request);
 	
 		$response = $client->send_request($request);
+		
+		var_dump($response);
 	
 		if ($response['message'] === "success"){
 			header('Location: home.php');
@@ -157,4 +171,5 @@ if (isset($_POST['register'])){
 		header('Location: home.php');
 	}
 }
+
 
