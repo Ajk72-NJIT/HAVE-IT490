@@ -36,20 +36,20 @@ $ingredientArray = $response['message'];
         <div class="input-group">
             <div class="dropdown">
                 <input value = '' type="text" name = "ingredientInput" id="ingredientInput" class="input-field" oninput="filterIngredients()" placeholder="Search for ingredients...">
-		<div id="ingredientDropdown" class="dropdown-content">
+		            <div id="ingredientDropdown" class="dropdown-content">
                     <?php
-			foreach($ingredientArray as $item){
-				echo "<a href='#' onclick=\"fillInput('$item')\">$item</a>";
-			}
+                        foreach($ingredientArray as $item){
+                            echo "<a href='#' onclick=\"fillInput('$item')\">$item</a>";
+                        }
 
                     ?>
                 </div>
             </div>
         </div>
-	<button type="submit" name = "addFridge" class="submit-button">Add to Fridge</button>
-        <button type="submit" name="logout" class="logout-button">Logout</button>
+        <button type="submit" name = "addFridge" class="submit-button">Add to Fridge</button>
         <button type="submit" name="openFridge" class="submit-button">Open Fridge</button>
-                <button type="submit" name="getRecipes" class="submit-button">Get Recipes</button>
+        <button type="submit" name="getRecipes" class="submit-button">Get Recipes</button>
+        <button type="submit" name="logout" class="logout-button">Logout</button>
         </form>
     </div>
     
