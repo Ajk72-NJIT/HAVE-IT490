@@ -28,7 +28,7 @@ if ($response['authed'] == "not authed") {
         <link rel="stylesheet" href="styles.css">
     </head>
 
-    <body>
+    <body style="height:auto">
         <div class="recipe-container">
             <?php
             foreach ($RecipeArray as $recipe) {
