@@ -1,0 +1,100 @@
+7a6f870, Edwin, ecl24@njit.edu, Added inline styles to fix small viewport issue with recipes,  (origin/frontendBranch-(final)), 8 hours ago
+6bf96cf, Edwin, ecl24@njit.edu, New presentation approach for recipe cards, styles updated, , 13 hours ago
+5f08c0c, Edwin, ecl24@njit.edu, Adjustment to search bar script, , 17 hours ago
+d13e327, Edwin, ecl24@njit.edu, Finished search bar filter display and filter logic, added scripts, , 17 hours ago
+4b036c5, Heinrich, hdn@njit.edu, reorganizing,  (origin/h-deployment-sb), 18 hours ago
+d42365a, Heinrich, hdn@njit.edu, fe prod folder, , 18 hours ago
+db2e81a, Heinrich, hdn@njit.edu, dbrmq prod folder, , 18 hours ago
+a7dc9a4, Heinrich, hdn@njit.edu, prod folder, , 18 hours ago
+11eceda, root, root@IT490Database.myguest.virtualbox.org, finished database and rabbit systemd,  (origin/dbrmqBranch-(final)), 18 hours ago
+5ec61e4, Ajk72-NJIT, 83480036+Ajk72-NJIT@users.noreply.github.com, Update systemd.sh, , 19 hours ago
+6dc3e2e, Ajk72-NJIT, 83480036+Ajk72-NJIT@users.noreply.github.com, Update systemd.sh, , 19 hours ago
+e2923d5, Ajk72-NJIT, 83480036+Ajk72-NJIT@users.noreply.github.com, Create systemd.sh, , 19 hours ago
+5e364a6, Ajk72-NJIT, 83480036+Ajk72-NJIT@users.noreply.github.com, Create rabbit.service, , 19 hours ago
+3af3008, Ajk72-NJIT, 83480036+Ajk72-NJIT@users.noreply.github.com, Create systemd.sh, , 19 hours ago
+21f27b4, Ajk72-NJIT, 83480036+Ajk72-NJIT@users.noreply.github.com, Create database.service, , 19 hours ago
+8fa3c5f, Ajk72-NJIT, 83480036+Ajk72-NJIT@users.noreply.github.com, Update dmzServer.php,  (origin/dmzBranch-(final)), 20 hours ago
+c661725, Ajk72-NJIT, 83480036+Ajk72-NJIT@users.noreply.github.com, Update dmz.service, , 20 hours ago
+32ffa09, alex, alex@it490standalone.alex.virtualbox.org, added service related files, , 21 hours ago
+1172b55, alex, alex@it490standalone.alex.virtualbox.org, Setup DMZ within systemD. Included .sh file to setup everything., , 21 hours ago
+7332ef3, Edwin, ecl24@njit.edu, Defined fade animation styling, affects all pages on load/reload, , 21 hours ago
+c91fa47, Heinrich Nowak, nowakmataheinrich@gmail.com, Add files via upload, , 22 hours ago
+964603c, Heinrich Nowak, nowakmataheinrich@gmail.com, Add files via upload, , 22 hours ago
+77326af, Heinrich Nowak, nowakmataheinrich@gmail.com, Rename testRabbitMQ.ini to RabbitMQ/testRabbitMQ.ini, , 22 hours ago
+5ae3503, Heinrich Nowak, nowakmataheinrich@gmail.com, Add files via upload, , 22 hours ago
+24ef5c3, heinrich, hdn@njit.edu, merge files for final, , 22 hours ago
+3a9b4d2, Edwin, ecl24@njit.edu, Slight changes to fridge and recipes (to be tested), page titles updated, , 23 hours ago
+47bc43b, Edwin, ecl24@njit.edu, Button reorganization, cleaned up code, , 25 hours ago
+e72be50, Edwin, ecl24@njit.edu, Refined CSS, adjusted home.php to reflect, add img, , 25 hours ago
+50ce803, heinrich, hdn@njit.edu, ini updated,  (origin/frontendBranch-(midterm)), 32 hours ago
+5f2cdf1, hdn, hdn@njit.edu, adding composer and updating dmz server,  (origin/dmzBranch-(midterm)), 32 hours ago
+51ea901, heinrich, hdn@njit.edu, minor changes to databaseserver, has to do with sessions,  (origin/databaseBranch-(midterm)), 32 hours ago
+b36d855, Ajk72-NJIT, 83480036+Ajk72-NJIT@users.noreply.github.com, Add files via upload,  (HEAD -> master, origin/master, origin/HEAD), 35 hours ago
+9817805, Heinrich, hdn@njit.edu, qa folder, , 2 days ago
+9f13491, Heinrich, hdn@njit.edu, adding dbrmq deployment files, , 2 days ago
+dcd9d8a, Heinrich, hdn@njit.edu, adding front end files configured, , 2 days ago
+7d475cc, Heinrich Nowak, nowakmataheinrich@gmail.com, Delete RabbitMQ directory, , 3 days ago
+b7688da, Heinrich Nowak, nowakmataheinrich@gmail.com, Delete Frontend directory, , 3 days ago
+24a0244, Heinrich Nowak, nowakmataheinrich@gmail.com, Delete Database directory, , 3 days ago
+71b65cc, Heinrich, hdn@njit.edu, reorganizing, , 3 days ago
+d295de1, Heinrich, hdn@njit.edu, updates to send and rollback, , 3 days ago
+38952cc, Heinrich, hdn@njit.edu, minor changes, , 4 days ago
+068937e, Heinrich, hdn@njit.edu, changes to send.php, , 4 days ago
+f39d9b2, Heinrich, hdn@njit.edu, changes to ziphelper, , 4 days ago
+7fec751, Heinrich, hdn@njit.edu, changes to ziphelper, , 4 days ago
+01bae98, Heinrich, hdn@njit.edu, adding fanout exchange to receive.php, , 5 days ago
+6057cbd, Heinrich, hdn@njit.edu, adding fanout exchange to send.php, , 5 days ago
+f05927c, Heinrich, hdn@njit.edu, adding scripts to rollback, modifying send.php, , 5 days ago
+cc3e12e, Heinrich, hdn@njit.edu, Merge branch 'h-deployment-sb' of https://github.com/Ajk72-NJIT/HAVE-IT490 into h-deployment-sb multi vm problem, , 5 days ago
+214301a, Heinrich, hdn@njit.edu, adding a script to update the state on db based on version number, , 5 days ago
+153fdc7, hdn, hdn@njit.edu, rabbit working successfully, , 5 days ago
+d7a32aa, hdn, hdn@njit.edu, changes to copy, , 5 days ago
+c7dd480, Heinrich, hdn@njit.edu, dmz copy, , 5 days ago
+1d5adcd, Heinrich, hdn@njit.edu, changes, , 5 days ago
+e69a5e1, Heinrich, hdn@njit.edu, progress, , 5 days ago
+3bc9a60, Ajk72-NJIT, 83480036+Ajk72-NJIT@users.noreply.github.com, Merge pull request #2 from Ajk72-NJIT/rabbitBranch, , 3 weeks ago
+e1fb69d, hdn, hdn@njit.edu, folder structure exclude zip, , 4 weeks ago
+a1a4b72, hdn, hdn@njit.edu, folder structure, , 4 weeks ago
+f936364, hdn, hdn@njit.edu, helper updates, , 4 weeks ago
+0d821ef, hdn, hdn@njit.edu, second commit, , 4 weeks ago
+08f574e, hdn, hdn@njit.edu, deployment test, , 4 weeks ago
+d85a0ec, root, root@IT490Frontend.myguest.virtualbox.org, changes to the front end, ready for midterm, , 7 weeks ago
+05fcd05, alex, alex@it490standalone.alex.virtualbox.org, A few DMZ changes, mostly due to testing and struggling with that array, , 7 weeks ago
+3b942ef, alex, alex@IT490Database.myguest.virtualbox.org, Changes to database, midterm, , 7 weeks ago
+1db2a44, alex, alex@IT490messenger.myguest.virtualbox.org, including DMZ in switch statement.,  (origin/rabbitBranch-(midterm)), 7 weeks ago
+cd1164d, root, root@IT490messenger.myguest.virtualbox.org, Changes to rabbit to make it recursive - allowing the DB and DMZ to communicate without issues, , 7 weeks ago
+1e0a42c, Edwin Leon, ecl24@njit.edu, Updated home/landing files, left out from last commit, , 7 weeks ago
+ab5426e, Edwin Leon, ecl24@njit.edu, Home/Login done, 1st deliverable in landing setup, pending logic. Uncomment start of landing.php, , 7 weeks ago
+827139f, Heinrich Nowak, nowakmataheinrich@gmail.com, Update dmzServer.php, , 7 weeks ago
+ebfdec3, Heinrich Nowak, nowakmataheinrich@gmail.com, Add files via upload, , 7 weeks ago
+ac5cd4e, Heinrich Nowak, nowakmataheinrich@gmail.com, Update dmzServer.php, , 7 weeks ago
+3b92987, Heinrich Nowak, nowakmataheinrich@gmail.com, Update dmzServer.php, , 7 weeks ago
+81c3f09, Heinrich Nowak, nowakmataheinrich@gmail.com, Update dmzServer.php, , 7 weeks ago
+f137ea9, Heinrich Nowak, nowakmataheinrich@gmail.com, Update dmzServer.php, , 7 weeks ago
+afdf049, alex, alex@IT490Database.myguest.virtualbox.org, database update, , 7 weeks ago
+102c3c3, Heinrich Nowak, nowakmataheinrich@gmail.com, adding new functions, , 7 weeks ago
+c623ae7, Heinrich Nowak, nowakmataheinrich@gmail.com, Add files via upload, , 7 weeks ago
+3c5d860, Heinrich Nowak, nowakmataheinrich@gmail.com, Delete Frontend directory, , 7 weeks ago
+b02aad2, Heinrich Nowak, nowakmataheinrich@gmail.com, Delete Database directory, , 7 weeks ago
+662ab34, Heinrich Nowak, nowakmataheinrich@gmail.com, Delete unused directories, , 7 weeks ago
+9e29342, Heinrich Nowak, nowakmataheinrich@gmail.com, Update dmzServer.php, , 7 weeks ago
+244da84, Heinrich Nowak, nowakmataheinrich@gmail.com, Update dmzServer.php, , 7 weeks ago
+486cd72, Heinrich Nowak, nowakmataheinrich@gmail.com, Update dmzServer.php, , 7 weeks ago
+fb046d7, Heinrich Nowak, nowakmataheinrich@gmail.com, dmz work, , 7 weeks ago
+ab436a9, alex, alex@IT490Frontend.myguest.virtualbox.org, frontend changes. Landing page, auth, registration, sessiontokens, expiration., , 2 months ago
+656551a, alex, alex@IT490messenger.myguest.virtualbox.org, rabbitMQ fixes/changes, , 2 months ago
+6cc066a, alex, alex@IT490Database.myguest.virtualbox.org, additional database query fuctions (auth, logout, register), , 2 months ago
+fc792a6, alex, alex@IT490Frontend.myguest.virtualbox.org, fixing frontend, , 2 months ago
+df760d4, alex, alex@IT490Frontend.myguest.virtualbox.org, Merge branch 'master' into frontendBranch, , 2 months ago
+87ad006, alex, alex@IT490Database.myguest.virtualbox.org, fixing branch, , 2 months ago
+946f3ff, alex, alex@IT490Database.myguest.virtualbox.org, Merge branch 'master' into databaseBranch, , 2 months ago
+587e9a6, alex, alex@IT490Database.myguest.virtualbox.org, vendor, , 2 months ago
+df691bf, alex, alex@IT490messenger.myguest.virtualbox.org, vendor, , 2 months ago
+26d1d04, alex, alex@IT490Frontend.myguest.virtualbox.org, frontend setup, , 2 months ago
+8a4a277, alex, alex@IT490messenger.myguest.virtualbox.org, rabbitMQ setup, , 2 months ago
+1f4987d, alex, alex@IT490Database.myguest.virtualbox.org, test, , 2 months ago
+c890b71, alex, alex@IT490messenger.myguest.virtualbox.org, rabbitMQ setup, , 2 months ago
+411572b, alex, alex@IT490Database.myguest.virtualbox.org, setup Database Server, , 2 months ago
+0b2dd1b, alex, alex@IT490Database.myguest.virtualbox.org, database folder, , 3 months ago
+9ecf5a8, alex, alex@IT490Database.myguest.virtualbox.org, mysql database folder, , 3 months ago
+6efedf0, alex, alex@IT490Database.myguest.virtualbox.org, mysql, , 3 months ago
