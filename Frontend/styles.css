@@ -40,7 +40,7 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Dropdown styling */
+/* Dropdown styling - For Landing Search*/
 .dropdown-content {
     display: none;
     position: absolute;
@@ -106,4 +106,67 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* 
+==============================================
+RECIPE CARD STYLING
+==============================================
+ */
+.recipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Recipe card styling */
+.recipe-card {
+    max-width: 300px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.recipe-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.ingredients,
+.instructions {
+    margin-top: 10px;
+}
+
+.ingredient,
+.instruction {
+    margin-bottom: 5px;
+}
+
+.rating-form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.rating-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.rating-button:hover {
+    background-color: #333;
 }
